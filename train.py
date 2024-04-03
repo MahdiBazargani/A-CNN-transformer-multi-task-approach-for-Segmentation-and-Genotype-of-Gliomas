@@ -63,12 +63,12 @@ validation_transforms = tio.Compose([
 
 
 training_transforms = tio.Compose([
-    #tio.RandomAffine(scales=(0.8, 1.2), degrees=3 , p=0.3, isotropic =False,default_pad_value='mean'),
-    #tio.RandomNoise(std=(0,0.1),p=0.15),
-    #tio.RandomBlur(p=0.2,std=(0,1)),
-    #tio.RandomElasticDeformation(p=0.3),
-    #tio.RandomAnisotropy(p=0.1,downsampling=(1,2)),
-    #tio.RandomGamma(p=1,log_gamma=0.2),
+    tio.RandomAffine(scales=(0.8, 1.2), degrees=3 , p=0.3, isotropic =False,default_pad_value='mean'),
+    tio.RandomNoise(std=(0,0.1),p=0.15),
+    tio.RandomBlur(p=0.2,std=(0,1)),
+    tio.RandomElasticDeformation(p=0.3),
+    tio.RandomAnisotropy(p=0.1,downsampling=(1,2)),
+    tio.RandomGamma(p=1,log_gamma=0.2),
     tio.RandomFlip(axes=(0,1,2)),
 ])
 

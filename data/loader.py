@@ -53,5 +53,5 @@ class Loader:
 
     def path_to_modality(self,subject_path,modality):
         for file in os.listdir(subject_path):
-            if file.split('.')[0].endswith(modality):
+            if file.lower().split('.')[0].endswith(modality):
                 return os.path.join(subject_path,file)
